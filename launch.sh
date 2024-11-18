@@ -11,6 +11,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
 polybar -q main -c "$DIR"/config.ini &
+polybar -q sub -c "$DIR"/config.ini &
 
 # IPC settings and test
 ln -sf /tmp/polybar_mqueue.$! /tmp/ipc-main
